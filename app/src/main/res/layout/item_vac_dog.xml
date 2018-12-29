@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:padding="5dp">
+    <TextView
+        android:id="@+id/txtWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bangnampueng"
+        android:textSize="@dimen/abc"/>
+
+    <TextView
+        android:id="@+id/txtVacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:maxWidth="150dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bangnampueng"
+        android:layout_toRightOf="@+id/txtWeek"
+        android:textSize="@dimen/abc" />
+
+    <TextView
+        android:id="@+id/txtNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/bangnampueng"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+    android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/txtVacc"
+        android:textSize="@dimen/abc" />
+
+</RelativeLayout>

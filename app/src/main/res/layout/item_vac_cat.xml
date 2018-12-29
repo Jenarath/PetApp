@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:padding="5dp">
+    <TextView
+        android:id="@+id/txtWeekcat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/black"
+
+        android:fontFamily="@font/bangnampueng"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_header"/>
+
+    <TextView
+        android:id="@+id/txtVaccat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/bangnampueng"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:maxWidth="500dp"
+        android:layout_toRightOf="@+id/txtWeekcat"
+        android:textSize="@dimen/text_header" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/txtNote"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:maxWidth="150dp"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_toRightOf="@+id/txtVacc"-->
+        <!--android:textSize="16sp" />-->
+
+</RelativeLayout>

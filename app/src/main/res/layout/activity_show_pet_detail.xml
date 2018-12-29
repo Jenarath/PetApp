@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_menu"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_pet_show"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"
+        android:theme="@style/AppTheme.AppBarOverlay_pink"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_title_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ข้อมูลสัตว์เลี้ยง"
+            android:fontFamily="@font/bangnampueng"
+            android:textSize="@dimen/text_header"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="20dp">
+                <ImageView
+                    android:id="@+id/petPhoto"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/photo_add" />
+            </RelativeLayout>
+
+            <!--Name-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="ชื่อ"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:text="@string/app_name"
+                        android:id="@+id/txtPetName"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"
+                        />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:id="@+id/radio1"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="เพศ"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"
+                        android:id="@+id/txtPetGender"
+                        />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ประเภท"
+                    android:layout_toRightOf="@+id/radio_f"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textSize="@dimen/text_header"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="@string/app_name"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textSize="@dimen/text_header"
+                    android:textStyle="bold"
+                    android:id="@+id/txtPetType"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="สายพันธุ์"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textSize="@dimen/text_header"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="44dp"
+                    android:text="@string/app_name"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textSize="@dimen/text_header"
+                    android:textStyle="bold"
+                    android:id="@+id/txtPetCatagory"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="วันเกิด"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textSize="@dimen/text_header"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textSize="@dimen/text_header"
+                    android:textStyle="bold"
+                    android:id="@+id/txtPetBirth"
+                    />
+
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="น้ำหนัก"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="@string/app_name"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        android:id="@+id/txtPetWeight"
+                        />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!---->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="ส่วนสูง"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="@string/app_name"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        android:id="@+id/txtPetHeight"
+                        />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+            <!--Phone-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="สี"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="@string/app_name"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        android:id="@+id/txtPetColor"
+                        />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <!--Password-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/ll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="สัตว์แพทย์"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="@string/app_name"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textSize="@dimen/text_header"
+                        android:textStyle="bold"                        android:id="@+id/txtPetDoc"
+                        />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="วันที่เป็นเจ้าของ"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textSize="@dimen/text_header"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/app_name"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textSize="@dimen/text_header"
+                    android:textStyle="bold"                    android:id="@+id/txtPetOwner"
+                    />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/button_edit_pet"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button_edit"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

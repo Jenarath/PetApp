@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lovepetapp.pet">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+
+    <application
+        android:name="com.lovepetapp.pet.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.lovepetapp.pet.FirstLoginActivity"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainMenuActivity"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.lovepetapp.pet.LoginActivity"
+            android:configChanges= "screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.lovepetapp.pet.RegisterActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!--<activity android:name="com.lovepetapp.pet.MainMenuActivity" />-->
+
+        <activity android:name="com.lovepetapp.pet.ActivityPromotion" />
+        <activity android:name="com.lovepetapp.pet.ActivityPromoDetail" />
+
+
+        <activity android:name="com.lovepetapp.pet.ActivityVaccine" />
+        <activity android:name="com.lovepetapp.pet.ActivityVacDog" />
+        <activity android:name="com.lovepetapp.pet.ActivityVacCat" />
+
+
+        <activity android:name="com.lovepetapp.pet.ActivityMenuPets" />
+        <activity android:name="com.lovepetapp.pet.ActivityAddPetDetail" />
+        <activity android:name="com.lovepetapp.pet.ActivityShowPetDetail" />
+        <activity android:name="com.lovepetapp.pet.ActivityPetEditDetail" />
+
+
+        <activity android:name="com.lovepetapp.pet.ActivityHospital" />
+        <activity android:name="com.lovepetapp.pet.ActivityContact" />
+        <activity android:name="com.lovepetapp.pet.ActivityActive" />
+
+        <activity android:name="com.lovepetapp.pet.ActivityCalendar"/>
+        <activity android:name="com.lovepetapp.pet.ActivityAppointment"/>
+        <activity android:name="com.lovepetapp.pet.ActivityShowAppointment"/>
+
+
+        <activity android:name="com.lovepetapp.pet.ProfileEditActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.lovepetapp.pet.ShowProfileActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name="com.lovepetapp.pet.SettingActivity"/>
+
+        <activity android:name="com.lovepetapp.pet.ForgotPasswordActivity"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Activity required to show ad overlays. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+
+
+    </application>
+
+</manifest>

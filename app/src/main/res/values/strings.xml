@@ -1,0 +1,363 @@
+<resources>
+    <string name="app_name">LOVE PET</string>
+
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">รหัสผ่าน</string>
+    <string name="login">Login</string>
+    <string name="skip">Skip</string>
+    <string name="dnt_have_acc">Dont have an account?</string>
+    <string name="signup">Sign Up</string>
+    <string name="cpassword">Confirm Password</string>
+    <string name="phone">เบอร์โทร</string>
+    <string name="already_have_acc">Already have an account?</string>
+    <string name="signin">Sign In</string>
+    <string name="register">Register</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="error_invalid_email">Invalid Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_cpassword">Enter Confirm Password</string>
+    <string name="pass_nomatch">Password not matched</string>
+    <string name="enter_phone">Enter Phone</string>
+    <string name="net_not_conn">Internet not connected</string>
+    <string name="error_registering">Error while registering</string>
+    <string name="register_success">Register Successful</string>
+    <string name="email_already_regis">Email already registered</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="login_in">Login..</string>
+    <string name="login_success">Login Successful</string>
+    <string name="logout_success">Loout Successful</string>
+
+    <string name="not_log">Not Logged In, Please login</string>
+    <string name="address">Address</string>
+    <string name="edit">Edit</string>
+    <string name="no_user_found">No user found</string>
+    <string name="updating">Updating..</string>
+    <string name="profile_edit">Profile Edit</string>
+    <string name="update">Update</string>
+    <string name="update_prof_succ">Profile Updated Successful</string>
+    <string name="update_prof_not_succ">Error updating profile</string>
+    <string name="name_empty">Name cannot be empty</string>
+    <string name="email_empty">Email is Empty</string>
+    <string name="loading">Loading..</string>
+
+    <string name="isRTL">isRTL</string>
+
+    <string name="email_pass_nomatch">Email and Password not matched</string>
+    <string name="error_server">Not successful</string>
+
+
+    <string name="upload_success">เพิ่มข้อมูลสำเร็จ</string>
+
+    <string name="setting">ตั้งค่า</string>
+    <string name="press_again_exit">Press again to Exit</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="sure_exit">Are you sure you want to exit?</string>
+    <string name="exit">Exit</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="error_login">Error in Login</string>
+
+    <string name="ok">OK</string>
+
+
+    <string-array name="petTypeDog">
+        <item><b>เกรตเดน</b></item>
+        <item>เกรทเทอร์สวิสส์เมาน์เทนด๊อก</item>
+        <item>เกรย์ฮาวนด์</item>
+        <item>โกลเดินริทรีฟเวอร์</item>
+
+        <item>คลัมเบอร์สแปเนียล</item>
+        <item>คอลลี</item>
+        <item>คะเนเดียนเอสกิโมด็อก</item>
+        <item>คาอิเคน</item>
+        <item>คิช</item>
+        <item>คันกัล</item>
+        <item>แคทาลันชีปด็อก</item>
+        <item>แคร์นเทร์เรียร์</item>
+        <item>แควาเลียร์คิงชาลส์สแปเนียล</item>
+        <item>โคมอนดอร์</item>
+        <item>โคเรียนชินโด</item>
+        <item>เคนคอร์โซ่</item>
+        <item>คุนหมิงวูลฟ์ด็อก</item>
+        <item>คอเคเซียนเชเพิร์ดด็อก</item>
+
+        <item>แจ็กรัสเซลล์เทร์เรียร์</item>
+        <item>แจพานีสชิน</item>
+        <item>แจพานีสเทร์เรียร์</item>
+        <item>แจพานีสสปิตซ์</item>
+
+        <item>ชาผ</item>
+        <item>ชิโกะกุ</item>
+        <item>ชิบะอินุ</item>
+        <item>ชีวาวา</item>
+        <item>เชตแลนด์ชีปด็อก</item>
+        <item>เชาเชา</item>
+        <item>ไชนีสเครสติดด็อก</item>
+
+        <item>ซามอยิด</item>
+        <item>ซาลูกี</item>
+        <item>ซือจื่อ</item>
+        <item>เซนต์เบอร์นาร์ด</item>
+        <item>ไซบีเรียนฮัสกี</item>
+
+        <item>แด็กซันด์</item>
+        <item>แดนดีดินมอนต์เทร์เรียร</item>
+        <item>แดลเมเชียน</item>
+        <item>โดโกอาร์เฆนติโน</item>
+        <item>โดเบอร์แมนพินเชอร์</item>
+        <item>ด็อจเดบอร์โดซ์</item>
+        <item>ดัตช์เชเพิร์ด</item>
+
+        <item>ทิเบตันแมสติฟฟ์</item>
+        <item>ไทยบางแก้ว</item>
+        <item>ไทยหลังอาน</item>
+        <item>โทสะอินุ</item>
+
+        <item>นโปเลียนแมสติฟฟ์</item>
+
+        <item>บรักโกอีตาเลียโน</item>
+        <item>บรักแซ็ง-แฌร์แม็ง</item>
+        <item>บรักโดแวร์ญ</item>
+        <item>บรักดูว์บูร์บอแน</item>
+        <item>บรักดูว์ปุย</item>
+        <item>บรักฟร็องแซ</item>
+        <item>บรัสเซิลส์กริฟฟัน</item>
+        <item>บราซิเลียนโดโก</item>
+        <item>บราซิเลียนเทร์เรียร์</item>
+        <item>บริตทานี</item>
+        <item>บรีแกกรีฟงว็องเดแอ็ง</item>
+        <item>บรีอาร์ด</item>
+        <item>บรูโนจูราฮาวนด</item>์
+        <item>บลัดฮาวนด์</item>
+        <item>บลูทิกคูนฮาวนด์</item>
+        <item>บลูพอลเทร์เรียร์</item>
+        <item>บลูเลซี</item>
+        <item>บ็อกเซอร์</item>
+        <item>บอยคินสแปเนียล</item>
+        <item>บอร์ซอย</item>
+        <item>บอร์เดอร์คอลลี</item>
+        <item>บอร์เดอร์เทร์เรียร์</item>
+        <item>บอสตันเทร์เรียร์</item>
+        <item>บอสเนียคอร์ส-แฮด์ฮาวนด</item>
+        <item>บาคาร์วัลด็อก</item>
+        <item>บาแซกรีฟงว็องเดแอ็ง (กร็อง)</item>
+        <item>บาแซกรีฟงว็องเดแอ็ง (เปอตี)</item>
+        <item>บาแซเบลอเดอกัสกอญ</item>
+        <item>บาแซโฟฟว์เดอเบรอตาญ</item>
+        <item>บาแซอาร์เตเซียงนอร์ม็อง</item>
+        <item>บาร์แบ</item>
+        <item>บาแวเรียนเมาน์เทนฮาวนด</item>
+        <item>บาสก์เชเพิร์ดด็อก</item>
+        <item>บาเซนจี</item>
+        <item>บิยานูโกเดลัสเองการ์ตาซิโอเนส</item>
+        <item>บิวเซรอน</item>
+        <item>บีเกิล</item>
+        <item>บีเกิล-แฮร์เรียร์</item>
+        <item>บีชันฟรีส</item>
+        <item>บีลี</item>
+        <item>บุลล์เทร์เรียร์</item>
+        <item>บุลล์เทร์เรียร</item>
+        <item>บุลล์แมสติฟฟ์</item>
+        <item>บุลล์แอนด์เทร์เรียร์</item>
+        <item>บุลเลินไบส์เซอร์</item>
+        <item>บูลด็อก</item>
+        <item>บูโกวีนาเชเพิร์ดด็อก</item>
+        <item>บูร์บุล</item>
+        <item>บูวีเยเดซาร์แดน</item>
+        <item>บูวีเยเดฟล็องดร</item>
+        <item>เบดลิงตันเทร์เรียร์</item>
+        <item>เบลเจียนเชเพิร์ดด็อก (ครุเนินดาล)</item>
+        <item>เบลเจียนเชเพิร์ดด็อก (แตร์ฟือเริน)</item>
+        <item>เบลเจียนเชเพิร์ดด็อก (มาลีนัว)</item>
+        <item>เบลเจียนเชเพิร์ดด็อก (ลาเกอนัว)</item>
+        <item>เบลอเดอกัสกอญ (กร็อง)</item>
+        <item>เบลอเดอกัสกอญ (เปอตี)</item>
+        <item>เบอร์นีสเมาน์เทนด็อก</item>
+        <item>เบียร์ดดิดคอลลี</item>
+        <item>แบร์กามัสโกเชเพิร์ด</item>
+        <item>แบร์เฌบล็องซุอิส</item>
+        <item>แบร์เฌปีการ์</item>
+        <item>แบร์เนอร์นีเดอร์เลาฟ์ฮุนท์</item>
+        <item>แบล็กนอร์วีเจียนเอลก์ฮาวนด์</item>
+        <item>แบล็กเมาท์เคอร์</item>
+        <item>แบล็กรัชเชียนเทร์เรียร์</item>
+        <item>แบล็กแอนด์แทนคูนฮาวนด์</item>
+        <item>แบล็กแอนด์แทนเวอร์จิเนียฟอกซ์ฮาวนด์</item>
+        <item>แบสซิตฮาวนด์</item>
+        <item>โบรฮอลเมอร</item>
+        <item>โบสรง</item>
+        <item>โบโลญเญเซ</item>
+        <item>โบฮีเมียนเชเพิร์ด</item>
+
+        <item>ปั๊ก</item>
+        <item>ปักกิ่ง</item>
+        <item>ปาปียง</item>
+        <item>เปรูเวียนแฮร์เลสสด็อก</item>
+        <item>เปอร์โรเดอร์ปรีซ่าคานาริโอ</item>
+
+        <item>พอเมอเรเนียน</item>
+        <item>พาร์ซันแจ็กรัสเซลล์เทร์เรียร์</item>
+        <item>พูเดิล</item>
+
+        <item>ฟิล่าบราซิเลียโร</item>
+        <item>เฟรนช์บูลด็อก</item>
+
+        <item>มอลทีส</item>
+        <item>มาเรมมาชีปด็อก</item>
+        <item>มินะเจอร์ชเนาเซอร์</item>
+        <item>มินะเจอร์พินเชอร์</item>
+        <item>เม็กซิกันแฮร์เลสสด็อก</item>
+        <item>แมนเชสเตอร์เทร์เรียร์</item>
+
+        <item>ยอร์กเชอร์เทร์เรียร์</item>
+        <item>เยอรมันเชเพิร์ด</item>
+        <item>เยอรมันช็อตแฮร์พอยน์เตอร์</item>
+
+        <item>รอทท์ไวเลอร์</item>
+        <item>รัสเซลล์เทร์เรียร์</item>
+        <item>แรตเทร์เรียร์</item>
+        <item>โรดีเชียนริดจ์แบ็ค</item>
+
+        <item>ลาซาแอปโซ</item>
+        <item>แลบราดอร์ริทรีฟเวอร์</item>
+        <item>เลิฟเชิน</item>
+
+        <item>วิฌลอ</item>
+        <item>วิปพิต</item>
+        <item>เวลช์คอร์กี (คาร์ดิกัน)</item>
+        <item>เวลช์คอร์กี (เพมบรุก)</item>
+        <item>เวลช์เทร์เรียร์</item>
+        <item>เวลช์สปริงเงอร์สแปเนียล</item>
+        <item>เวสต์ไฮต์แลนด์ไวต์เทร์เรียร์</item>
+        <item>ไวมาราเนอร์</item>
+
+        <item>สกอตติชเดียร์ฮาวนด์</item>
+        <item>สกอตติชเทร์เรียร์</item>
+
+        <item>อเมริกันคอกเกอร์สแปเนียล</item>
+        <item>อเมริกันบูลด็อก</item>
+        <item>อเมริกันพิตบุลล์เทร์เรียร์</item>
+        <item>อเมริกันฟอกซ์ฮาวนด์</item>
+        <item>อเมริกันวอเตอร์สแปเนียล</item>
+        <item>อเมริกันสแตฟฟอร์ดเชอร์เทร์เรียร์</item>
+        <item>อเมริกันเอสกิโมด็อก</item>
+        <item>อ็องกลอ-ฟร็องแซเดอเปอติตเวเนอรี</item>
+        <item>อเมริกันแฮร์เลสส์เทร์เรียร์</item>
+        <item>ออสเตรเลียนเคลพี</item>
+        <item>ออสเตรเลียนแคตเทิลด็อก</item>
+        <item>ออสเตรเลียนเชเพิร์ด</item>
+        <item>ออสเตรเลียนซิลกีเทร์เรียร์</item>
+        <item>ออสเตรเลียนเทร์เรียร์</item>
+        <item>ออสเตรเลียนสตัมปีเทลแคตเทิลด็อก</item>
+        <item>ออสเตรียนแบล็กแอนด์แทนฮาวนด์</item>
+        <item>ออสเตรียนพินเชอร์</item>
+        <item>อะกิตะอินุ</item>
+        <item>อะแลสกันแมละมิวต์</item>
+        <item>อะแลสกันคลีไค</item>
+        <item>อักบัช</item>
+        <item>อัพเพินเซ็ลเลอร์เซ็นเนินฮุนท์</item>
+        <item>อัฟเฟินพินเชอร์</item>
+        <item>อาซาวัก</item>
+        <item>อาร์ตัวฮาวนด์</item>
+        <item>อาร์มีเนียนแกมเพอร์ด็อก</item>
+        <item>อาร์ม็อง</item>
+        <item>อารีเยฌัว</item>
+        <item>อาเรียฌพอยน์เตอร์</item>
+        <item>อาลาโนเอสปัญญอล</item>
+        <item>อาอีดี</item>
+        <item>อิงกลิชคอกเกอร์สแปเนียล</item>
+        <item>อิงกลิชเซตเตอร์</item>
+        <item>อิงกลิชแมสติฟฟ์</item>
+        <item>อิตาเลียนเกรย์ฮาวด์</item>
+        <item>แอนดาลูซีอันฮาวนด์</item>
+        <item>แอนาโทเลียนเชเพิร์ดด็อก</item>
+        <item>แอฟแกนเชเพิร์ด</item>
+        <item>แอฟแกนฮาวนด์</item>
+        <item>แอร์เดลเทร์เรียร์</item>
+        <item>แอลไพน์ดัคส์บรัคเคอ</item>
+        <item>แอลไพน์สแปเนียล</item>
+        <item><b>โอลด์อิงลิชชีปด็อก</b></item>
+
+        <item>ฮกไกโด</item>
+    </string-array>
+    <string-array name="petTypeCat">
+        <item>อเมริกันบ็อบเทล</item>
+        <item>เอเซียนกึ่งขนยาว</item>
+        <item>บาลินีส</item>
+        <item>เบอร์แมน</item>
+        <item>บริติชขนยาว</item>
+        <item>ชานทิลลี</item>
+        <item>หิมาลายัน</item>
+        <item>จาวานีส</item>
+        <item>เมนคูน</item>
+        <item>เนบีลัง</item>
+        <item>นอร์เวเจียนฟอเรสต</item>
+        <item>โอเรียนทัลขนยาว</item>
+        <item>เปอร์เซีย</item>
+        <item>แร็กดอลล์ </item>
+        <item>ไซบีเรียน</item>
+        <item>เทอร์คิชแวน</item>
+        <item>เทอร์คิชแองโกรา</item>
+        <item>ยอร์กช็อกโกแลต</item>
+
+        <item>อะบิสซิเนียน</item>
+        <item>อเมริกันขนสั้น</item>
+        <item>ออสเตรเลียนมิสต์ </item>
+        <item>บอมเบย์ </item>
+        <item>บริติชขนสั้น</item>
+        <item>เบอร์มีส</item>
+        <item>เบอร์มิลลา</item>
+        <item>แคลิฟอร์เนียสแปงเกิลด</item>
+        <item>ชาร์ตร</item>
+        <item>คัลเลอร์พอยต์ขนสั้น</item>
+        <item>อียิปเทียนมัว</item>
+        <item>ยูโรเปียนขนสั้น</item>
+        <item>เอกโซติก</item>
+        <item>ฮาวานาบราวน์</item>
+        <item>โคราช</item>
+        <item>อ็อกซิแคต</item>
+        <item>โอเรียนทัลขนสั้น</item>
+        <item>รัสเซียนบลู</item>
+        <item>วิเชียรมาศ</item>
+        <item>สิงหปุระ</item>
+        <item>สโนว์ช</item>
+        <item>โซโกเก</item>
+        <item>โซมาล</item>
+        <item>ตองกินีส</item>
+
+        <item>อเมริกันบ็อบเทล</item>
+        <item>อเมริกันเคิร์ล</item>
+        <item>อเมริกันไวร์แฮร</item>
+        <item>คอร์นิชเรกซ์</item>
+        <item>ซิมริก</item>
+        <item>ดีวอนเรกซ์</item>
+        <item>เยอรมันเรกซ์</item>
+        <item>แจแพนีสบ็อบเทล</item>
+        <item>ลาเปิร์ม</item>
+        <item>แมงซ์</item>
+        <item>มึนชกิน</item>
+        <item>โอโจสแอซูเลส</item>
+        <item>เพเทอร์บัลด์</item>
+        <item>พิกซีบ็อบ</item>
+        <item>เซลเกิร์กเรกซ์</item>
+        <item>สกอตติชโฟลด์</item>
+        <item>สฟิงซ</item>
+
+        <item>เบงกอล</item>
+        <item>ชอซี</item>
+        <item>ชีโต</item>
+        <item>ซาวันนา</item>
+        <item>เซเรนเจตี</item>
+        <item>ทอยเกอร์</item>
+
+
+    </string-array>
+
+
+
+</resources>

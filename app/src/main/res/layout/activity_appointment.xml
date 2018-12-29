@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_appoint"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_appoint"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"
+        android:theme="@style/AppTheme.AppBarOverlay_pink"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เพิ่มการนัดหมาย"
+            android:fontFamily="@font/bangnampueng"
+            android:textSize="@dimen/text_header"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/text_header"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_header"
+            android:text="วัน.เดือน.ปี"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/bangnampueng"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/whiteAA"
+            android:textColor="@color/black"
+            tools:text="@tools:sample/date/ddmmyy" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/text_header"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_header"
+            android:text="เวลา"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bangnampueng"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
+            android:background="@color/whiteAA"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/text_header"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_header"
+            android:text="ขื่อสัตว์เลี้ยง"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/bangnampueng"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/TextLabel"
+            android:layout_marginLeft="30dp"
+            app:backgroundTint="@color/black">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/petAddName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whiteAA"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textSize="@dimen/text_header"
+                android:fontFamily="@font/bangnampueng"
+                android:padding="5dp"
+                android:layout_marginRight="60dp"
+                android:textColor="@color/black"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/text_header"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_header"
+            android:text="ข้อมูล"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="@font/bangnampueng"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@android:color/white"
+            android:theme="@style/TextLabel"
+            android:layout_marginLeft="30dp"
+            app:backgroundTint="@color/black">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/petDetail"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/whiteAA"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:layout_marginLeft="40dp"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:padding="5dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/bangnampueng"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_header" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSaveAppoint"
+        android:layout_marginTop="50dp"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_save"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

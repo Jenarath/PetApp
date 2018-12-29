@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_menu"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_pet_detail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"
+        android:theme="@style/AppTheme.AppBarOverlay_pink"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_title_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ข้อมูลสัตว์เลี้ยง"
+            android:textSize="@dimen/text_header"
+            android:fontFamily="@font/bangnampueng"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="20dp">
+            <ImageButton
+                android:id="@+id/btn_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:background="@drawable/photo_add" />
+            </RelativeLayout>
+
+            <!--Name-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="ชื่อ"
+                        android:textSize="@dimen/text_header"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textStyle="bold"
+
+                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/white"
+                        android:theme="@style/TextLabel"
+                        android:layout_marginLeft="60dp"
+                        app:backgroundTint="@color/black">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/pet_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_header"
+                            android:fontFamily="@font/bangnampueng"
+                            android:textStyle="bold"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll"
+                    android:gravity="bottom"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginLeft="80dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:id="@+id/radio1"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="เพศ"
+                    android:textSize="@dimen/text_header"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textStyle="bold"                    />
+
+                    <RadioGroup
+                        android:id="@+id/radioGender"
+                        android:layout_marginLeft="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="เพศผู้"
+                            android:textSize="@dimen/text_header"
+                            android:fontFamily="@font/bangnampueng"/>
+
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:textSize="@dimen/text_header"
+                            android:fontFamily="@font/bangnampueng"
+                            android:layout_height="match_parent"
+                            android:text="เพศเมีย" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ประเภท"
+                    android:layout_toRightOf="@+id/radio_f"
+                    android:textSize="@dimen/text_header"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textStyle="bold"                    />
+
+                <RadioGroup
+                    android:id="@+id/radioType"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/radioDog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="สุนัข"
+                        android:textSize="@dimen/text_header"
+                        android:fontFamily="@font/bangnampueng"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/radioCat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="แมว"
+                        android:textSize="@dimen/text_header"
+                        android:fontFamily="@font/bangnampueng"
+                        />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text_header"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textStyle="bold"
+                    android:text="สายพันธุ์"
+                    android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinner_pet"
+                        android:layout_width="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="@dimen/text_header"
+                        android:fontFamily="@font/bangnampueng"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/edtName2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:padding="7dp"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:visibility="invisible" >
+                    </EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text_header"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textStyle="bold"
+                    android:text="วันเกิด"
+                    android:layout_height="wrap_content" />
+
+
+
+                <Button
+                    android:id="@+id/btnDateBirth"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    tools:text="@tools:sample/date/ddmmyy" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="น้ำหนัก"
+                        android:textSize="@dimen/text_header"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textStyle="bold"                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/white"
+                        android:theme="@style/TextLabel"
+                        android:layout_marginLeft="15dp"
+                        app:backgroundTint="@color/black">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/pet_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_header"
+                            android:fontFamily="@font/bangnampueng"
+                            android:textStyle="bold"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll1"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="80dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!---->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="ส่วนสูง"
+                        android:textSize="@dimen/text_header"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textStyle="bold"                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/white"
+                        android:layout_marginLeft="15dp"
+                        android:theme="@style/TextLabel"
+                        app:backgroundTint="@color/black">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/pet_height"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_header"
+                            android:fontFamily="@font/bangnampueng"
+                            android:textStyle="bold" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll2"
+                    android:layout_marginLeft="80dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <!--Phone-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/ll5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="สี"
+                        android:textSize="@dimen/text_header"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textStyle="bold"/>                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/white"
+                        android:theme="@style/TextLabel"
+                        android:layout_marginLeft="5dp"
+                        app:backgroundTint="@color/white">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/pet_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:layout_marginLeft="60dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_header"
+                            android:fontFamily="@font/bangnampueng"
+                            android:textStyle="bold" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll5"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="80dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--Password-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/ll3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="สัตว์แพทย์"
+                        android:textSize="@dimen/text_header"
+                        android:fontFamily="@font/bangnampueng"
+                        android:textStyle="bold"                        />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@android:color/white"
+                        android:theme="@style/TextLabel"
+                        android:layout_marginLeft="10dp"
+                        app:backgroundTint="@color/black">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/pet_doctor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_header"
+                            android:fontFamily="@font/bangnampueng"
+                            android:textStyle="bold" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll3"
+                    android:gravity="bottom"
+                    android:layout_marginLeft="100dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/black" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="5dp"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text_header"
+                    android:fontFamily="@font/bangnampueng"
+                    android:textStyle="bold"
+                    android:text="วันที่เป็นเจ้าของ"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnDateOwner"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    tools:text="@tools:sample/date/ddmmyy" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_gravity="center"
+                android:background="@drawable/save"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

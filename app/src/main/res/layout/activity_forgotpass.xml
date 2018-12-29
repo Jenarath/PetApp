@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_forgostpass"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar"
+        android:theme="@style/AppTheme.AppBarOverlay_pink"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_title_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ลืมรหัสผ่าน"
+            android:fontFamily="@font/bangnampueng"
+            android:textSize="@dimen/text_header"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/toolbar_forgostpass"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/tv"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/email_black" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black90"
+                android:theme="@style/TextLabel_Grey"
+                app:backgroundTint="@color/black90">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_forgot_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll1"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="@color/black90" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/black90" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="@color/black90" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_forgot_send"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:textColor="@color/white"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/rl"
+        android:background="@drawable/button_save"/>
+
+</RelativeLayout>

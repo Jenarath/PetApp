@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_appoint"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_app_detail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar"
+            android:theme="@style/AppTheme.AppBarOverlay_pink"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/toolbar_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="การนัดหมาย"
+                android:fontFamily="@font/bangnampueng"
+                android:textSize="@dimen/text_header"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_gravity="center" />
+
+        </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/text_header"
+        android:background="@color/whiteAA"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/ly1"
+        android:layout_marginLeft="@dimen/text_header"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_header"
+            android:text="เวลา"
+            android:textStyle="bold"
+            android:fontFamily="@font/bangnampueng"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_header"
+            android:text=""
+            android:id="@+id/txtTime"
+            android:layout_marginLeft="@dimen/text_header"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bangnampueng"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/ly1"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ly2"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_header"
+                android:text=""
+                android:id="@+id/txtAName"
+                android:layout_marginLeft="@dimen/text_header"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bangnampueng"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/ly2"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_header"
+                android:text=""
+                android:id="@+id/txtData"
+                android:layout_marginLeft="@dimen/text_header"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/bangnampueng"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
