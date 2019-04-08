@@ -48,7 +48,9 @@ public class ProfileEditActivity extends AppCompatActivity {
     private String name, email, phone, password = "", cpass = "", address = "", imagePath = "";
     private int PICK_IMAGE_REQUEST = 1;
     private static final int STORAGE_PERMISSION_CODE = 123;
-
+    String check = "0";
+    String user_image = "";
+    String uname = "",umail = "", uphone="",uadd="",uimage ="";
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -82,14 +84,26 @@ public class ProfileEditActivity extends AppCompatActivity {
         editText_address = findViewById(R.id.et_prof_edit_address);
         editText_pass = findViewById(R.id.et_prof_edit_pass);
 
-        setProfileVar();
+
+        Intent iGet = getIntent();
+        uimage = iGet.getStringExtra("user_image");
+        uname = iGet.getStringExtra("uname");
+        uadd = iGet.getStringExtra("uadd");
+        uphone = iGet.getStringExtra("uphone");
+        umail = iGet.getStringExtra("umail");
+
+        System.out.println("image " + uimage);
+
+//        setProfileVar();
+
+        getData();
 
         button_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (validate()) {
                     if (methods.isNetworkAvailable()) {
-                        setVariables();
+//                        setVariables();
                         loadProfileEdit();
                     } else {
                         Toast.makeText(ProfileEditActivity.this, getResources().getString(R.string.net_not_conn), Toast.LENGTH_SHORT).show();
@@ -101,6 +115,7 @@ public class ProfileEditActivity extends AppCompatActivity {
         imageView_editpropic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                check = "1";
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -132,26 +147,43 @@ public class ProfileEditActivity extends AppCompatActivity {
                     progressDialog.dismiss();
                 }
 
-                setVariables();
+//                setVariables();
                 System.out.println("successE " + success);
                 System.out.println("messageE " + message);
 
                 if (success.equals("1")) {
-                    if (message.equals("1")) {
-                        updateArray();
-                        Constant.isUpdate = true;
-                        finish();
+//                    if (message.equals("1")) {
+//                        updateArray();
+//                        Constant.isUpdate = true;
+//                        finish();
                         Toast.makeText(ProfileEditActivity.this, getResources().getString(R.string.update_prof_succ), Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(ProfileEditActivity.this, getResources().getString(R.string.email_already_regis), Toast.LENGTH_SHORT).show();
-                   }
+                    Intent intent = new Intent(ProfileEditActivity.this, ShowProfileActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+//                    } else {
+//                        Toast.makeText(ProfileEditActivity.this, getResources().getString(R.string.email_already_regis), Toast.LENGTH_SHORT).show();
+//                   }
                 } else if (success.equals("0")) {
                     Toast.makeText(ProfileEditActivity.this, getResources().getString(R.string.update_prof_not_succ), Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        loadProfileUpdate.execute(name, email, password, phone, address, imagePath);
+        System.out.println("imagePath Update" + imagePath);
+        System.out.println("imagePathh" + uimage);
+        System.out.println("check " + check);
+        System.out.println("check name " + editText_name.getText().toString());
+
+
+        if(check.equals("0")) {
+
+            loadProfileUpdate.execute(editText_name.getText().toString(), editText_email.getText().toString(), editText_phone.getText().toString(), editText_pass.getText().toString(), editText_address.getText().toString(),uimage,check);
+
+        }
+        else {
+            loadProfileUpdate.execute(editText_name.getText().toString(), editText_email.getText().toString(), editText_phone.getText().toString(), editText_pass.getText().toString(), editText_address.getText().toString(),imagePath,check);
+
+        }
     }
 
     private Boolean validate() {
@@ -176,37 +208,43 @@ public class ProfileEditActivity extends AppCompatActivity {
         }
     }
 
-    private void setVariables() {
-        name = editText_name.getText().toString();
-        email = editText_email.getText().toString();
-        phone = editText_phone.getText().toString();
-        password = editText_pass.getText().toString();
-        address = editText_address.getText().toString();
-
-        if (!password.equals("")) {
-            methods.changeRemPass();
-        }
-    }
+//    private void setVariables() {
+//        name = editText_name.getText().toString();
+//        email = editText_email.getText().toString();
+//        phone = editText_phone.getText().toString();
+//        password = editText_pass.getText().toString();
+//        address = editText_address.getText().toString();
+//
+//        if (!password.equals("")) {
+//            methods.changeRemPass();
+//        }
+//    }
 
     private void updateArray() {
         Constant.itemUser.setName(name);
         Constant.itemUser.setEmail(email);
         Constant.itemUser.setMobile(phone);
         Constant.itemUser.setAddress(address);
+        Constant.itemUser.setImage(imagePath);
+
     }
 
-    public void setProfileVar() {
-        editText_name.setText(Constant.itemUser.getName());
-        editText_phone.setText(Constant.itemUser.getMobile());
-        editText_email.setText(Constant.itemUser.getEmail());
-        editText_address.setText(Constant.itemUser.getAddress());
+    public void getData() {
+        editText_name.setText(uname);
+        editText_phone.setText(uphone);
+        editText_email.setText(umail);
+        editText_address.setText(uadd);
+        Picasso.get().load(uimage).into(imageView_profile);
 
-        try {
-            Picasso.get().load(Constant.itemUser.getImage()).placeholder(R.drawable.placeholder_profile).into(imageView_profile);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        System.out.println("getImage " + Constant.itemUser.getImage());
+
+//        try {
+//            Picasso.get().load(image.placeholder(R.drawable.placeholder_profile).into(imageView_profile);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
+
 
     //Requesting permission
     private void requestStoragePermission() {

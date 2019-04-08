@@ -427,6 +427,10 @@ public class ActivityPetEditDetail extends AppCompatActivity {
 //                    if (message.equals("1")) {
                         finish();
                         Toast.makeText(ActivityPetEditDetail.this, getResources().getString(R.string.update_prof_succ), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(ActivityPetEditDetail.this, ActivityMenuPets.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
 //                    } else {
 //                        Toast.makeText(ActivityPetEditDetail.this, getResources().getString(R.string.email_already_regis), Toast.LENGTH_SHORT).show();
 //                    }

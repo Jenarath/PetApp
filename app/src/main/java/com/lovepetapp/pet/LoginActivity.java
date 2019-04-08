@@ -140,6 +140,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onEnd(String success, String message) {
                 progressDialog.dismiss();
+
+                System.out.println("successL " + success);
+                System.out.println("messageL " + message);
                 if (success.equals("true")) {
                     if (message.equals("0")) {
                         Toast.makeText(LoginActivity.this, getResources().getString(R.string.email_pass_nomatch), Toast.LENGTH_SHORT).show();
